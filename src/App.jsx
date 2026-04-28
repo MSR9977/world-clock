@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import AddMoreCountries from "./components/AddMoreCountries.jsx";
 import ThemeSwitch from "./components/ThemeSwitch.jsx";
-import ToggleTimeFormatButton from "./components/toggleTimeFormatButton.jsx";
+import ToggleTimeFormatButton from "./components/ToggleTimeFormatButton.jsx";
 import WorldClock from "./components/WorldClock.jsx";
 import WorldMapBackground from "./components/WorldMapBackground.jsx";
 
