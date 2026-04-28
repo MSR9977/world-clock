@@ -201,7 +201,7 @@ export default function App() {
           </div>
         </section>
 
-        <footer className="relative z-20 mx-auto mb-2 mt-3 flex w-fit max-w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-medium text-slate-500 shadow-lg shadow-slate-950/5 backdrop-blur dark:border-neutral-100/15 dark:bg-black/20 dark:text-slate-400">
+        <footer className="relative z-20 mx-auto mb-2 mt-3 flex w-fit max-w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-s font-medium text-slate-500 shadow-lg shadow-slate-950/5 backdrop-blur dark:border-neutral-100/15 dark:bg-black/20 dark:text-slate-400">
           <span>Made by Mohamed Alromaihi🔺</span>
           <a
             href="https://github.com/MSR9977/world-clock"
