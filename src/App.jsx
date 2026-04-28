@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import AddMoreCountries from "./components/AddMoreCountries.jsx";
 import ThemeSwitch from "./components/ThemeSwitch.jsx";
-import ToggleTimeFormatButton from "./components/ToggleTimeFormatButton.jsx";
+import ToggleTimeFormatButton from "./components/toggleTimeFormatButton.jsx";
 import WorldClock from "./components/WorldClock.jsx";
 import WorldMapBackground from "./components/WorldMapBackground.jsx";
 
@@ -278,6 +278,30 @@ export default function App() {
             </div>
           </div>
         )}
+
+        <footer className="relative justify-center border-t border-black/10 dark:border-neutral-100/20 pt-5 mt-2 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+          <span>Made by Mohamed Alromaihi🔺</span>
+          <a
+            href="https://github.com/MSR9977/world-clock"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open world-clock repository on GitHub"
+            className="rounded-full p-1 text-slate-700 transition hover:text-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/20 dark:text-slate-300 dark:hover:text-blue-400"
+          >
+            <svg
+              aria-hidden="true"
+              className="h-4 w-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12 2C6.477 2 2 6.59 2 12.253c0 4.529 2.865 8.371 6.839 9.727.5.095.683-.222.683-.494 0-.244-.009-.89-.014-1.747-2.782.62-3.369-1.375-3.369-1.375-.455-1.185-1.11-1.5-1.11-1.5-.908-.636.069-.623.069-.623 1.004.072 1.532 1.057 1.532 1.057.892 1.565 2.341 1.113 2.91.851.091-.662.349-1.113.635-1.369-2.221-.259-4.556-1.139-4.556-5.067 0-1.119.39-2.034 1.03-2.751-.103-.259-.446-1.302.098-2.713 0 0 .84-.276 2.75 1.051A9.372 9.372 0 0 1 12 6.958a9.37 9.37 0 0 1 2.504.345c1.909-1.327 2.747-1.051 2.747-1.051.546 1.411.203 2.454.1 2.713.641.717 1.028 1.632 1.028 2.751 0 3.938-2.339 4.805-4.567 5.059.359.317.679.943.679 1.9 0 1.37-.013 2.475-.013 2.811 0 .274.18.594.688.493C19.138 20.62 22 16.78 22 12.253 22 6.59 17.523 2 12 2Z"
+              />
+            </svg>
+          </a>
+        </footer>
       </div>
     </main>
   );

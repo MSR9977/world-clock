@@ -63,6 +63,7 @@ export default function WorldClock({
   const [draggedIndex, setDraggedIndex] = useState(null);
   const [dragOverIndex, setDragOverIndex] = useState(null);
   const [pendingRemoveTimeZone, setPendingRemoveTimeZone] = useState("");
+  const [removingTimeZones, setRemovingTimeZones] = useState([]);
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -124,9 +125,11 @@ export default function WorldClock({
           getCountryCodeFromFlagEmoji(clock.city) ||
           knownCityCountryCodes[cleanCityName];
 
+        const isRemoving = removingTimeZones.includes(clock.timeZone);
+
         return (
         <article
-          className={`min-h-[155px] cursor-move rounded-3xl border bg-white px-5 py-4 text-left shadow-xl shadow-slate-200/70 transition-all hover:bg-slate-50 active:cursor-grabbing dark:bg-[#1f1f1f] dark:shadow-black/30 dark:hover:bg-[#242424] xl:px-5 xl:py-4 ${
+          className={`${isRemoving ? "animate-pop-out pointer-events-none" : "animate-pop-in"} min-h-[155px] cursor-move rounded-3xl border bg-white px-5 py-4 text-left shadow-xl shadow-slate-200/70 transition-all hover:bg-slate-50 active:cursor-grabbing dark:bg-[#1f1f1f] dark:shadow-black/30 dark:hover:bg-[#242424] xl:px-5 xl:py-4 ${
             isDragTarget
               ? "border-blue-500 ring-4 ring-blue-500/20 dark:border-blue-400 dark:ring-blue-400/20"
               : "border-slate-200 dark:border-neutral-700"
@@ -179,8 +182,14 @@ export default function WorldClock({
                 event.stopPropagation();
 
                 if (isRemovePending) {
-                  onRemoveClock(clock.timeZone);
+                  setRemovingTimeZones((prev) => [...prev, clock.timeZone]);
                   setPendingRemoveTimeZone("");
+                  setTimeout(() => {
+                    onRemoveClock(clock.timeZone);
+                    setRemovingTimeZones((prev) =>
+                      prev.filter((tz) => tz !== clock.timeZone)
+                    );
+                  }, 400);
                   return;
                 }
 
