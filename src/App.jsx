@@ -179,8 +179,7 @@ export default function App() {
 
   return (
     <main className={isDarkMode ? "dark" : ""}>
-      <div className="relative min-h-screen overflow-hidden bg-white px-5 py-4 text-slate-900 transition-colors dark:bg-[#121212] dark:text-white sm:py-5">
-        <WorldMapBackground isDarkMode={isDarkMode} />
+<div className="relative min-h-screen overflow-hidden bg-white px-5 py-4 text-slate-900 transition-colors dark:bg-[#121212] dark:text-white sm:py-5">        <WorldMapBackground isDarkMode={isDarkMode} />
 
         <section className="relative z-10 mx-auto w-full max-w-[1800px]">
           <div className="mb-6 flex flex-col items-center gap-3">
@@ -279,8 +278,7 @@ export default function App() {
           </div>
         )}
 
-        <footer className="relative justify-center border-t border-black/10 dark:border-neutral-100/20 pt-5 mt-2 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400">
-          <span>Made by Mohamed Alromaihi🔺</span>
+<footer className="relative z-20 mx-auto mt-2 flex w-full max-w-[1800px] items-center justify-center gap-2 border-t border-black/10 pt-5 text-xs font-medium text-slate-500 dark:border-neutral-100/20 dark:text-slate-400">          <span>Made by Mohamed Alromaihi🔺</span>
           <a
             href="https://github.com/MSR9977/world-clock"
             target="_blank"
